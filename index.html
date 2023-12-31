@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <link rel="icon" href="ico.png" type="image/png">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invitación de Boda</title>
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        background-color: #eaeaea;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+      .navbar {
+        position: fixed;
+        top: 0; /* Alinea la navbar en la parte superior de la pantalla */
+        left: 0; /* Alinea la navbar al lado izquierdo de la pantalla */
+        right: 0; /* Alinea la navbar al lado derecho de la pantalla */
+        display: flex;
+        flex-wrap: wrap; /* Permite que los elementos se ajusten según el ancho */
+        justify-content: space-around;
+        width: 100%;
+        background-color: #ffffff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        font-size: 18px;
+      }
+      .nav-button {
+        flex: 1 1 1 1 25%; /* Ocupa la mitad del ancho disponible */
+        border: none;
+        padding: 20px;
+        cursor: pointer;
+        text-transform: uppercase;
+        color: white;
+        font-weight: bold;
+      }
+      .nav-button-location {
+        background-color: #a3a993;
+      }
+      .nav-button-confirm {
+        background-color: #6a735d;
+      }
+      .nav-button-itinerary {
+        background-color: #88929c;
+      }
+      .nav-button-gifts {
+        background-color: #688396;
+      }
+      .nav-button:hover {
+        color: #000;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(171, 120, 120, 0.1);
+      }
+      .invitation {
+        background-image: linear-gradient(
+            rgba(255, 255, 255, 0.8),
+            rgba(255, 255, 255, 0.8)
+          ),
+          url("background.jpg");
+        background-size: 90%; /* Ajusta el tamaño del fondo */
+        background-repeat: repeat; /* Hace que la imagen se repita */
+        text-align: center;
+        background-position: 0 0, 25% 25%;
+        background-blend-mode: normal, multiply;
+        width: 90%;
+        margin: 20px auto;
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+      }
+      .invitation h1 {
+        font-size: 24px;
+        color: #333;
+      }
+      .invitation h2 {
+        font-size: 24px;
+        color: #333;
+      }
+      .invitation p {
+        font-size: 16px;
+        color: #666;
+      }
+      .date-time {
+        background-color: #ddd;
+        color: #555;
+        padding: 5px;
+        margin: 5px;
+        font-weight: bold;
+        border-radius: 4px;
+      }
+
+      .centered-image-container {
+        display: flex; /* Usar flexbox para centrar */
+        justify-content: center; /* Centra los elementos horizontalmente */
+        align-items: center; /* Centra los elementos verticalmente */
+        width: 100%; /* Asegúrate de que el contenedor ocupe todo el ancho disponible */
+        animation: fadeIn 2s ease-in-out; /* Animación para la imagen */
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: scale(0.5);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      .centered-maps-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto; /* Cambiado de 20vh a auto para ajustar el contenedor al contenido */
+      }
+
+      .centered-maps-container a img {
+        max-width: 20%; /* Ajuste para asegurar que ambos íconos tengan un tamaño uniforme */
+        height: auto;
+        margin: 0 10px; /* Añade un margen para separar los íconos */
+      }
+      #location {
+        justify-content: center;
+      }
+
+      .centered-image-container img {
+        max-width: 90%; /* Asegúrate de que la imagen no exceda el ancho de la ventana */
+        height: auto; /* Mantiene la relación de aspecto de la imagen */
+        justify-content: center;
+        margin: 50px;
+      }
+      /* Estilos para pantallas más grandes */
+      @media (min-width: 768px) {
+        .invitation {
+          width: 50%;
+          margin: 40px auto;
+          padding: 20px;
+        }
+        .invitation h1 {
+          font-size: 50px;
+          margin: 10%;
+        }
+        .invitation p {
+          font-size: 30px;
+          margin: 10%;
+        }
+        .date-time {
+          padding: 10px;
+          margin: 10px;
+        }
+        .nav-button {
+          flex: 1;
+        } /* Restablece el flex para pantallas grandes */
+      }
+
+      /* Estilos para pantallas más pequeñas (móviles) */
+      @media (max-width: 767px) {
+        .navbar {
+          flex-direction: row;
+        }
+        .nav-button {
+          padding: 10px;
+          text-align: center;
+          flex: 1 1 50%;
+        } /* Ajusta el flex para dos botones por fila */
+      }
+      .bodasCemaco {
+        background-color: #88929c; /* Color similar a tus otros botones, pero ligeramente diferente */
+        color: white; /* Texto en color blanco */
+        border: none; /* Sin borde */
+        padding: 20px 40px; /* Espaciado interno */
+        margin: 20px; /* Espaciado externo alrededor del botón */
+        text-transform: uppercase; /* Texto en mayúsculas */
+        font-weight: bold; /* Texto en negrita */
+        font-size: 30px; /* Tamaño de la fuente */
+        border-radius: 5px; /* Bordes redondeados */
+        cursor: pointer; /* Cambiar el cursor a una mano al pasar por encima */
+        transition: background-color 0.3s, color 0.3s; /* Transición suave al cambiar de estado */
+        display: flex; /* Habilita flexbox */
+        flex-direction: column; /* Coloca los elementos en una columna */
+        align-items: center; /* Centra los elementos horizontalmente */
+        justify-content: center; /* Centra los elementos verticalmente */
+        text-align: center; /* Asegura que el texto también esté centrado */
+        text-decoration: none !important;
+      }
+      .bodasCemaco i {
+        margin-bottom: 5px; /* Espacio entre el ícono y el texto */
+    }
+
+      .bodasCemaco:hover {
+        background-color: #6a735d; /* Cambio de color al pasar el ratón por encima */
+        color: #000; /* Cambio de color de texto al pasar el ratón por encima */
+      }
+      .button-container {
+        display: flex; /* Usa flexbox para el alineamiento */
+        justify-content: center; /* Centra el botón horizontalmente */
+        align-items: center; /* Centra el botón verticalmente */
+        height: 50vh; /* Altura total de la ventana del navegador */
+    }
+    </style>
+    <script>
+      window.onload = function () {
+        window.scrollTo(0, 0); // Desplaza la página a la parte superior
+      };
+      document.addEventListener("DOMContentLoaded", (event) => {
+        window.scrollTo(0, 0);
+      });
+      window.onload = function () {
+        setTimeout(function () {
+          window.scrollTo(0, 0);
+        }, 1); // Puede ajustar el tiempo si es necesario
+      };
+      if ("scrollRestoration" in history) {
+        history.scrollRestoration = "manual";
+      }
+      window.onload = function () {
+        window.scrollTo(0, 0);
+      };
+      function scrollToLocation() {
+        const locationElement = document.getElementById("location");
+        const yOffset = -80; // Ajusta este valor para cambiar la cantidad de desplazamiento hacia arriba
+        const y =
+          locationElement.getBoundingClientRect().top +
+          window.pageYOffset +
+          yOffset;
+
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+      function scrollToConfirm() {
+        const locationElement = document.getElementById("confirm");
+        const yOffset = -80; // Ajusta este valor para cambiar la cantidad de desplazamiento hacia arriba
+        const y =
+          locationElement.getBoundingClientRect().top +
+          window.pageYOffset +
+          yOffset;
+
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+      function scrollToGift() {
+        const locationElement = document.getElementById("regalos");
+        const yOffset = -200; // Ajusta este valor para cambiar la cantidad de desplazamiento hacia arriba
+        const y =
+          locationElement.getBoundingClientRect().top +
+          window.pageYOffset +
+          yOffset;
+
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    </script>
+  </head>
+  <body>
+    <div class="navbar">
+      <button
+        class="nav-button nav-button-location"
+        onclick="scrollToLocation()"
+      >
+        Ubicación
+      </button>
+      <button class="nav-button nav-button-confirm" onclick="scrollToConfirm()">
+        Confirmar
+      </button>
+      <button class="nav-button nav-button-itinerary">Itinerario</button>
+      <button class="nav-button nav-button-gifts" onclick="scrollToGift()">
+        Regalos
+      </button>
+    </div>
+    <div class="invitation">
+      <div class="centered-image-container">
+        <img src="logoBoda.png" alt="logoBodaZepedaMencos" />
+      </div>
+      <h1>¡Nos casamos!</h1>
+      <p>
+        Con corazones llenos de fe y amor, nos preparamos para unir nuestras
+        vidas bajo la bendición de Dios. Te invitamos a ser parte de este
+        emocionante y sagrado momento, mientras damos el 'Sí, acepto' y
+        comenzamos nuestro viaje juntos bajo su gracia.
+      </p>
+      <div class="date-time">Sábado</div>
+      <div class="date-time">9 Marzo 2024</div>
+      <div class="date-time">15:30 PM</div>
+
+      <div id="location">
+        <h1>Ubicación</h1>
+        <p>Departamento de Guatemala, Mixco, Zona 7, Casa Villas Magen</p>
+        <div class="centered-maps-container">
+          <a
+            href="https://www.google.com/maps/dir//casa+villas+magen/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x85899f7ea70eaca5:0x7d6e33547b0194ef?sa=X&ved=2ahUKEwj5ja2shPaCAxXuRzABHfQyBp8Q9Rd6BAgsEAA"
+            target="_blank"
+          >
+            <img
+              src="mapsIcon.png"
+              alt="ubicación por waze"
+              style="max-width: 25%; height: auto"
+            />
+          </a>
+          <a
+            href="https://www.waze.com/es-419/live-map/directions/casa-villas-magen-10-calle-av-28-zona-4,-mixco?to=place.w.176554131.1765803450.2922755"
+            target="_blank"
+          >
+            <img
+              src="wazeicon.png"
+              alt="ubicación por waze"
+              style="max-width: 20%; height: auto"
+            />
+          </a>
+        </div>
+
+      </div>
+      <div id="confirm">
+        <h1>Confirmar</h1>
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSdSdUNHnsfGH1pvmuTkBRxf2jRQlt1pyfOojfm15XPE6lN8Lg/viewform?embedded=true"
+          width="100%"
+          height="500px"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          >Cargando…</iframe
+        >
+      </div>
+      <div class="button-container">
+        <a href="https://www.cemaco.com/list/boda275212" class="bodasCemaco" id="regalos" target="_blank">
+            <i class="fas fa-gift"></i>
+            Bodas Cemaco
+        </a>
+    </div>
+      
+      
+    </div>
+  </body>
+</html>
