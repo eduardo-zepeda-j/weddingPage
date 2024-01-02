@@ -48,7 +48,8 @@ window.onload = function () {
 
 function validarClave() {
     var clave = document.getElementById("clave").value;
-    fetch('https://tu-api-gateway-url', {
+    
+    fetch('https://qum4yhavhrbw6eiftzvzq4fl740dzvnf.lambda-url.us-east-1.on.aws/', {
         method: 'POST',
         body: JSON.stringify({ clave: clave }),
         headers: {
