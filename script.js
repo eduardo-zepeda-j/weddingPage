@@ -45,3 +45,19 @@ window.onload = function () {
 
     window.scrollTo({ top: y, behavior: "smooth" });
   }
+
+function validarClave() {
+    var clave = document.getElementById("clave").value;
+    fetch('https://tu-api-gateway-url', {
+        method: 'POST',
+        body: JSON.stringify({ clave: clave }),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById("mensaje").textContent = data.mensaje;
+    })
+    .catch(error => console.error('Error:', error));
+  }
