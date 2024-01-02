@@ -49,7 +49,7 @@ window.onload = function () {
 function validarClave() {
     var clave = document.getElementById("clave").value;
     
-    fetch('https://qum4yhavhrbw6eiftzvzq4fl740dzvnf.lambda-url.us-east-1.on.aws/', {
+    fetch('https://exmh7y5tp32ufctgreslxxb2me0vfsfh.lambda-url.us-west-1.on.aws/', {
         method: 'POST',
         body: JSON.stringify({ clave: clave }),
         headers: {
