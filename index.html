@@ -1,78 +1,135 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <link rel="icon" href="ico.png" type="image/png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invitación de Boda</title>
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <script src="script.js"></script>
+  </head>
 
-<head>
-  <link rel="icon" href="ico.png" type="image/png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Invitación de Boda</title>
-  <link rel="stylesheet" href="styles.css" type="text/css">
-  <script src="script.js"></script>
-</head>
-
-<body>
-  <div class="navbar">
+  <body>
+    <div class="navbar">
     <button class="nav-button nav-button-location" onclick="scrollToLocation()">
-      Ubicación
+      <i class="fa fa-map-marker-alt"></i>
+      
     </button>
+
     <button class="nav-button nav-button-confirm" onclick="scrollToConfirm()">
-      Confirmar
+      <i class="fa fa-check-circle"></i>
+      
     </button>
-    <button class="nav-button nav-button-itinerary">Itinerario</button>
+
+    <button class="nav-button nav-button-itinerary" onclick="scrollToItinerary()">
+      <i class="fa fa-calendar-alt"></i>
+     
+    </button>
+
     <button class="nav-button nav-button-gifts" onclick="scrollToGift()">
-      Regalos
+      <i class="fa fa-gift"></i>
+     
     </button>
   </div>
-  <div class="invitation">
-    <div class="centered-image-container">
-      <img src="logoBoda.png" alt="logoBodaZepedaMencos" />
-    </div>
-    <h1>¡Nos casamos!</h1>
-    <p>
-      Con corazones llenos de fe y amor, nos preparamos para unir nuestras
-      vidas bajo la bendición de Dios. Te invitamos a ser parte de este
-      emocionante y sagrado momento, mientras damos el 'Sí, acepto' y
-      comenzamos nuestro viaje juntos bajo su gracia.
-    </p>
-    <div class="date-time">Sábado</div>
-    <div class="date-time">9 Marzo 2024</div>
-    <div class="date-time">15:30 PM</div>
 
-    <div id="location">
-      <h1>Ubicación</h1>
-      <p>Departamento de Guatemala, Mixco, Zona 7, Casa Villas Magen</p>
-      <div class="centered-maps-container">
-        <a href="https://www.google.com/maps/dir//casa+villas+magen/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x85899f7ea70eaca5:0x7d6e33547b0194ef?sa=X&ved=2ahUKEwj5ja2shPaCAxXuRzABHfQyBp8Q9Rd6BAgsEAA"
-          target="_blank">
-          <img src="mapsIcon.png" alt="ubicación por waze" style="max-width: 25%; height: auto" />
-        </a>
-        <a href="https://www.waze.com/es-419/live-map/directions/casa-villas-magen-10-calle-av-28-zona-4,-mixco?to=place.w.176554131.1765803450.2922755"
-          target="_blank">
-          <img src="wazeicon.png" alt="ubicación por waze" style="max-width: 20%; height: auto" />
-        </a>
+    <div class="invitation">
+      <div class="centered-image-container">
+        <img src="logoBoda.png" alt="logoBodaZepedaMencos" />
+      </div>
+      <h1>¡Nos casamos!</h1>
+      <p>
+        Con corazones llenos de fe y amor, nos preparamos para unir nuestras
+        vidas bajo la bendición de Dios. Te invitamos a ser parte de este
+        emocionante y sagrado momento, mientras damos el 'Sí, acepto' y
+        comenzamos nuestro viaje juntos bajo su gracia.
+      </p>
+      
+
+      <div id="location">
+        <h1>Ubicación</h1>
+        <p>Departamento de Guatemala, Mixco, Zona 7, Casa Villas Magen</p>
+        <div class="centered-maps-container">
+          <a
+            href="https://www.google.com/maps/dir//casa+villas+magen/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x85899f7ea70eaca5:0x7d6e33547b0194ef?sa=X&ved=2ahUKEwj5ja2shPaCAxXuRzABHfQyBp8Q9Rd6BAgsEAA"
+            target="_blank"
+          >
+            <img
+              src="mapsIcon.png"
+              alt="ubicación por maps"
+              style="max-width: 35%; height: auto"
+            />
+          </a>
+          <a
+            href="https://www.waze.com/es-419/live-map/directions/casa-villas-magen-10-calle-av-28-zona-4,-mixco?to=place.w.176554131.1765803450.2922755"
+            target="_blank"
+          >
+            <img
+              src="wazeicon.png"
+              alt="ubicación por waze"
+              style="max-width: 25%; height: auto"
+            />
+          </a>
+        </div>
+      </div>
+     <div id="itinerary">
+      <h1>Itinerario</h1>
+      <p>Presiona para agendar en Google Calendar</p>
+      <a
+        href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=MXBiN29pNTJmZmFvOHRkcjBuYmh2MHY3aXAgZWR1YXJkby5lLnplcGVkYS5qQG0&tmsrc=eduardo.e.zepeda.j%40gmail.com"
+        class="button-link"
+        target="#"
+       
+      >
+        <div class="column">
+          <div class="title">Día</div>
+          <div class="content">Sábado</div>
+        </div>
+        <div class="column">
+          <div class="title">Fecha</div>
+          <div class="content">9 Marzo 2024</div>
+        </div>
+        <div class="column">
+          <div class="title">Hora</div>
+          <div class="content">3:30 P.M.</div>
+        </div>
+      </a>
+      <div class="image-container">
+        <img src="itinerario.png" alt="Descripción de la imagen" />
       </div>
 
     </div>
+   
     <div id="confirm">
       <h1>Confirmar</h1>
-      <form onsubmit="event.preventDefault(); validarClave();">
-        <label for="clave">Clave:</label>
-        <input type="password" id="clave" name="clave">
-        <input type="submit" value="Validar">
-      </form>
-      <div id="mensaje"></div>
-      
-    </div>
-    <div class="button-container">
-      <a href="https://www.cemaco.com/list/boda275212" class="bodasCemaco" id="regalos" target="_blank">
-        <i class="fas fa-gift"></i>
-        Bodas Cemaco
-      </a>
-    </div>
-
-
+      <p>Por favor ingresa la contraseña para confirmar tu asistencia:</p>
+      <input type="text" id="clave" placeholder="Ingresa la contraseña">
+      <button id = "botonForm" onclick="cambiarEnlace()">Confirmar</button>
+      <p id="mensaje"></p>
   </div>
-</body>
+  <p>Por favor confirmar antes del 9 de Febrero, si necesitas cancelar, únicamente envía de nuevo tu formulario.</p>
+      <h1>Regalos</h1>
+      <p>Queridos invitados,
+        hemos creado una lista de bodas en Cemaco, disponible en el siguiente botón.
+        Agradecemos de corazón cualquier regalo, aunque su presencia es lo más valioso
+        para nosotros.
 
+        Con cariño, Ester y Eduardo.
+      </p>
+      <div class="button-container">
+        <a
+          href="https://www.cemaco.com/list/boda275212"
+          class="bodasCemaco"
+          id="regalos"
+          target="_blank"
+        >
+          <i class="fas fa-gift"></i>
+          Bodas Cemaco
+        </a>
+      </div>
+    </div>
+  </body>
 </html>
