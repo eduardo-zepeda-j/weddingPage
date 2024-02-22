@@ -94,6 +94,10 @@ var enlacesPorHash = {
 "914c1b634d7b24eace4d6672f798176e7fbabdd063a0bff09819f4d62ec2718b": "https://docs.google.com/forms/d/e/1FAIpQLSd3fpHspEpzHDaXtmwgmWeafkxSMYWKVxsO300_lJxzm8pWHg/viewform?embedded=true",
 "320abc4a4cfeb7edf659ababc932f6e496989016d7b4148e5b2f730967823d92": "https://docs.google.com/forms/d/e/1FAIpQLScm6F9fSiTymn0qTpjYnBhGg_49AsC-Vm7MUKD984PIE19pDw/viewform?embedded=true",
 "d6c21b948958417ca98b682a573eb8aa1084b292d32f760f253ef53da13e5589":"https://docs.google.com/forms/d/e/1FAIpQLSdaxkZJ0qIQugVjKZyoiz0XrDdWx6CrxxWm0d9BiwaHG4iOGw/viewform?embedded=true",
+"72c1ec4488cbddc1d80d092c8d4d561111851848ddf881db155114314d2e5ff8":"https://docs.google.com/forms/d/e/1FAIpQLSdkvj_JtN21WZPU6op_Y9g7k-KHYfB_23NlpC4HdW0kLu7P3A/viewform?usp=sf_link",
+"4cdb40b1553e09dde059c40fe746893353283b5f579543a148d973c7e667ab0c":"https://docs.google.com/forms/d/e/1FAIpQLSfAea8UBF1mzpV6z35X2oNdnlNbb50nrPfj0HS2JZxbzVPbVg/viewform?usp=sf_link",
+"057ab329d5b91573100310d87a0e53cc06e08d0b37bcffc06ed29c2fbd84afd2":"https://docs.google.com/forms/d/e/1FAIpQLSdD-pYhEVCzlsgA3CpfHGA3WP70HyV2Z2STtY1qWnNtXc8CFQ/viewform?usp=sf_link"
+
 };
 
 
